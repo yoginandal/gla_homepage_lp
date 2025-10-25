@@ -35,7 +35,7 @@ const companyLogos = [
   },
   {
     name: "Adobe",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/8/8d/Adobe_Corporate_Logo.svg",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Adobe_Corporate_logo.svg/2560px-Adobe_Corporate_logo.svg.png",
   },
   {
     name: "Oracle",
@@ -51,7 +51,7 @@ const companyLogos = [
   },
   {
     name: "Deloitte",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/5/56/Deloitte.svg",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Logo_of_Deloitte.svg/2560px-Logo_of_Deloitte.svg.png",
   },
   {
     name: "Cisco",
@@ -67,11 +67,11 @@ const companyLogos = [
   },
   {
     name: "Toshiba",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/3/33/Toshiba_Logo.svg",
+    logo: "https://commons.wikimedia.org/wiki/File:Toshiba_logo.svg",
   },
   {
     name: "Samsung",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/b/b4/Samsung_wordmark.svg",
   },
   {
     name: "LG",
