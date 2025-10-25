@@ -54,22 +54,12 @@ export default function ProgramFinder() {
   return (
     <section className="relative py-20 md:py-32 bg-slate-50 overflow-hidden">
       <div className="container mx-auto px-4 md:px-8 max-w-7xl">
-        {/* Main Container with D-Shape */}
+        {/* Main Container - Square on Mobile, D-Shape on Desktop */}
         <div className="relative">
-          {/* D-Shaped Container with Overflow Hidden */}
-          <div
-            className="relative bg-white shadow-2xl overflow-hidden"
-            style={{
-              borderRadius: "0 300px 300px 0",
-            }}
-          >
-            {/* Green-Yellow Gradient D-Shape Background */}
-            <div
-              className="absolute right-0 top-0 bottom-0 w-1/2 bg-gradient-to-br from-green-500 via-green-400 to-yellow-400"
-              style={{
-                borderRadius: "0 300px 300px 0",
-              }}
-            />
+          {/* Container with Responsive Border Radius */}
+          <div className="relative bg-white shadow-2xl overflow-hidden rounded-2xl lg:rounded-none lg:rounded-r-[300px]">
+            {/* Green-Yellow Gradient D-Shape Background (Desktop Only) */}
+            <div className="hidden lg:block absolute right-0 top-0 bottom-0 w-1/2 bg-gradient-to-br from-green-500 via-green-400 to-yellow-400 rounded-r-[300px]" />
 
             <div className="grid lg:grid-cols-2 items-stretch relative">
               {/* Left Side - Form Content */}
@@ -102,7 +92,7 @@ export default function ProgramFinder() {
                             : "text-slate-500"
                         }
                       >
-                        {selectedCategory || "Undergraduate Programs"}
+                        {selectedCategory || "All Programs"}
                       </span>
                       <ChevronDown
                         className={`w-5 h-5 text-slate-600 transition-transform ${
@@ -156,8 +146,7 @@ export default function ProgramFinder() {
                             : "text-slate-500"
                         }
                       >
-                        {selectedSubcategory ||
-                          "BBA Entrepreneurship & Family Business"}
+                        {selectedSubcategory || "Part-time Ph.D. Rules"}
                       </span>
                       <ChevronDown
                         className={`w-5 h-5 text-slate-600 transition-transform ${
@@ -191,8 +180,8 @@ export default function ProgramFinder() {
                 </div>
               </div>
 
-              {/* Right Side - Student Image Positioned Left and Bottom */}
-              <div className="relative lg:block hidden min-h-[600px]">
+              {/* Right Side - Student Image (Desktop Only) */}
+              <div className="relative hidden lg:block min-h-[600px]">
                 <div className="absolute inset-0 flex items-end justify-start pl-4">
                   <img
                     src="https://static.vecteezy.com/system/resources/thumbnails/063/405/522/small/young-beautiful-college-student-with-backpack-and-holding-book-isolated-on-the-transparent-background-png.png"
@@ -202,15 +191,6 @@ export default function ProgramFinder() {
                 </div>
               </div>
             </div>
-          </div>
-
-          {/* Mobile Image */}
-          <div className="lg:hidden mt-8 flex justify-center">
-            <img
-              src="https://static.vecteezy.com/system/resources/thumbnails/063/405/522/small/young-beautiful-college-student-with-backpack-and-holding-book-isolated-on-the-transparent-background-png.png"
-              alt="Student"
-              className="h-64 w-auto object-contain"
-            />
           </div>
         </div>
       </div>
