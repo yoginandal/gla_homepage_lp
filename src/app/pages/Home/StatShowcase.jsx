@@ -97,13 +97,13 @@ export default function StatShowcase() {
           </h2>
         </div>
 
-        {/* Stats Grid */}
+        {/* Stats Grid with Green/Yellow Colors */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
           {stats.map((stat, index) => (
             <div key={index} className="text-center group">
-              {/* Number */}
+              {/* Number - Green Color */}
               <div className="mb-4">
-                <span className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-red-600 block">
+                <span className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-green-600 block">
                   <CountUp
                     end={stat.value}
                     duration={2500}
@@ -112,8 +112,8 @@ export default function StatShowcase() {
                 </span>
               </div>
 
-              {/* Divider Line */}
-              <div className="w-full h-0.5 bg-slate-900 mb-4 group-hover:bg-red-600 transition-colors duration-300"></div>
+              {/* Divider Line - Changes to Yellow on Hover */}
+              <div className="w-full h-0.5 bg-slate-900 mb-4 group-hover:bg-yellow-500 transition-colors duration-300"></div>
 
               {/* Label */}
               <div className="text-lg md:text-xl font-semibold text-slate-900">
