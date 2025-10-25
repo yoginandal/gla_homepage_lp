@@ -6,6 +6,7 @@ import ProgramsShowcase from "@/app/pages/Home/ProgramShowcase";
 import WhatSetUsApart from "@/app/pages/Home/WhatSetUsApart";
 import CampusLife from "@/app/pages/Home/CampusLife";
 import CampusEvents from "@/app/pages/Home/CampusEvents";
+import StatShowcase from "@/app/pages/Home/StatShowcase";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <WhatSetUsApart />
       <CampusLife />
       <CampusEvents />
+      <StatShowcase />
     </div>
   );
 }
