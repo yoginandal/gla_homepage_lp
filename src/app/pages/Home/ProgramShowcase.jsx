@@ -52,7 +52,7 @@ export default function ProgramFinder() {
     programData[selectedCategory]?.subcategories || [];
 
   return (
-    <section className="relative py-20 md:py-32 bg-slate-50 overflow-hidden">
+    <section className="relative py-20 md:py-32 bg-slate-900 text-white overflow-hidden">
       <div className="container mx-auto px-4 md:px-8 max-w-7xl">
         {/* Main Container - Square on Mobile, D-Shape on Desktop */}
         <div className="relative">
