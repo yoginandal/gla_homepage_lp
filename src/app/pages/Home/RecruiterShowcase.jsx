@@ -35,7 +35,7 @@ const companyLogos = [
   },
   {
     name: "Adobe",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Adobe_Corporate_logo.svg/2560px-Adobe_Corporate_logo.svg.png",
+    logo: "https://blog.logomaster.ai/hs-fs/hubfs/adobe-logo-2017.jpg?width=662&height=447&name=adobe-logo-2017.jpg",
   },
   {
     name: "Oracle",
@@ -67,7 +67,7 @@ const companyLogos = [
   },
   {
     name: "Toshiba",
-    logo: "https://commons.wikimedia.org/wiki/File:Toshiba_logo.svg",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Toshiba_logo.svg/2560px-Toshiba_logo.svg.png",
   },
   {
     name: "Samsung",
