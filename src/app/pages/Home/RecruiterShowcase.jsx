@@ -137,7 +137,7 @@ export default function RecruitersShowcase() {
               {/* CTA Button */}
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-green-600 to-yellow-500 hover:from-green-700 hover:to-yellow-600 text-white shadow-xl hover:shadow-2xl transition-all px-8 text-base font-semibold"
+                className="bg-linear-to-r from-green-600 to-yellow-500 hover:from-green-700 hover:to-yellow-600 text-white shadow-xl hover:shadow-2xl transition-all px-8 text-base font-semibold"
               >
                 Learn More
               </Button>

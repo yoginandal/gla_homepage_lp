@@ -24,13 +24,14 @@ const CountUp = ({ end, duration = 2000, suffix = "" }) => {
       { threshold: 0.3 }
     );
 
-    if (countRef.current) {
-      observer.observe(countRef.current);
+    const currentRef = countRef.current;
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (countRef.current) {
-        observer.unobserve(countRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, []);
@@ -62,6 +63,7 @@ const CountUp = ({ end, duration = 2000, suffix = "" }) => {
     };
   }, [isVisible, end, duration]);
 
+  // The span now just returns the values. Styling is handled by the parent.
   return (
     <span ref={countRef}>
       {count}
@@ -79,17 +81,17 @@ export default function StatShowcase() {
       </div>
 
       <div className="relative z-10 container mx-auto px-4 md:px-8 max-w-7xl">
-        {/* Large Hero Text with Text Shadow */}
+        {/* Large Hero Text with updated Text Shadow */}
         <div className="text-center mb-20">
           <h2
             className="text-8xl md:text-9xl lg:text-[12rem] font-black tracking-tight leading-none"
             style={{
               color: "#f5f5f5",
               textShadow: `
-                3px 3px 0px rgba(0, 0, 0, 0.03),
-                6px 6px 0px rgba(0, 0, 0, 0.02),
-                9px 9px 0px rgba(0, 0, 0, 0.015),
-                12px 12px 0px rgba(0, 0, 0, 0.01)
+                0px 4px 0px rgba(0, 0, 0, 0.1),
+                0px 8px 0px rgba(0, 0, 0, 0.08),
+                0px 12px 0px rgba(0, 0, 0, 0.06),
+                0px 16px 0px rgba(0, 0, 0, 0.04)
               `,
             }}
           >
@@ -101,15 +103,16 @@ export default function StatShowcase() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
           {stats.map((stat, index) => (
             <div key={index} className="text-center group">
-              {/* Number - Green Color */}
-              <div className="mb-4">
-                <span className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-green-600 block">
-                  <CountUp
-                    end={stat.value}
-                    duration={2500}
-                    suffix={stat.suffix}
-                  />
-                </span>
+              {/* Number - Font size and color applied here */}
+              <div
+                className="mb-4 text-green-600 font-medium"
+                style={{ fontSize: "80px", lineHeight: "1" }}
+              >
+                <CountUp
+                  end={stat.value}
+                  duration={2500}
+                  suffix={stat.suffix}
+                />
               </div>
 
               {/* Divider Line - Changes to Yellow on Hover */}
