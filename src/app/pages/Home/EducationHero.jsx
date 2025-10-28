@@ -21,11 +21,11 @@ export default function UniversityLegacy() {
   ];
 
   return (
-    <section className="relative w-full bg-slate-900 text-white py-16 md:py-24 overflow-hidden">
+    <section className="relative w-full bg-slate-900 text-white py-16 md:py-20 overflow-hidden">
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-green-600 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-yellow-500 rounded-full blur-3xl"></div>
+      <div className="absolute inset-0 opacity-5 overflow-hidden">
+        <div className="absolute top-0 left-0 w-64 h-64 md:w-96 md:h-96 bg-green-600 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-0 w-64 h-64 md:w-96 md:h-96 bg-yellow-500 rounded-full blur-3xl"></div>
       </div>
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 md:px-8">

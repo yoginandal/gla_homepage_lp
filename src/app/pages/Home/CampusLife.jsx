@@ -1,112 +1,140 @@
 "use client";
 
-import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Palette, Users, Trophy } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
-const campusActivities = [
+// Data for campus life activities
+const schools = [
   {
     id: 1,
-    title: "Arts and Culture",
-    icon: Palette,
-    description:
-      "GLA University fosters creativity in all its forms — be it art, music, drama, or dance. Our vibrant cultural scene provides endless opportunities to explore and express yourself.",
+    name: "Sports & Athletics",
     image:
-      "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=1400&auto=format&fit=crop&q=80",
-    gradient: "from-purple-600 to-fuchsia-600",
+      "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?q=80&w=2070&auto=format&fit=crop",
   },
   {
     id: 2,
-    title: "Campus Life",
-    icon: Users,
-    description:
-      "Experience the dynamic campus life at GLA University with countless opportunities for personal growth, leadership development, and memorable experiences.",
+    name: "Cultural Events & Festivals",
     image:
-      "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=1400&auto=format&fit=crop&q=80",
-    gradient: "from-blue-600 to-indigo-600",
+      "https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=2070&auto=format&fit=crop",
   },
   {
     id: 3,
-    title: "Sports and Athletics",
-    icon: Trophy,
-    description:
-      "GLA University provides excellent sporting facilities and programs, encouraging students to maintain an active lifestyle while competing at various levels.",
+    name: "Library & Learning Spaces",
     image:
-      "https://images.unsplash.com/photo-1517649763962-0c623066013b?w=1400&auto=format&fit=crop&q=80",
-    gradient: "from-green-600 to-emerald-600",
+      "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?q=80&w=2070&auto=format&fit=crop",
+  },
+  {
+    id: 4,
+    name: "Student Clubs & Communities",
+    image:
+      "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=2070&auto=format&fit=crop",
+  },
+  {
+    id: 5,
+    name: "Music & Dance",
+    image:
+      "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=2070&auto=format&fit=crop",
+  },
+  {
+    id: 6,
+    name: "Cafeteria & Dining",
+    image:
+      "https://images.unsplash.com/photo-1567521464027-f127ff144326?q=80&w=2070&auto=format&fit=crop",
+  },
+  {
+    id: 7,
+    name: "Art & Photography",
+    image:
+      "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?q=80&w=2070&auto=format&fit=crop",
+  },
+  {
+    id: 8,
+    name: "Hostel Life",
+    image:
+      "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?q=80&w=2069&auto=format&fit=crop",
   },
 ];
 
-export default function CampusLife() {
+const SchoolCard = ({ name, image }) => (
+  <div className="flex-shrink-0 w-[320px] rounded-lg overflow-hidden shadow-2xl bg-slate-900">
+    <div className="relative h-56 w-full">
+      <Image
+        src={image}
+        alt={name}
+        fill
+        className="object-cover"
+        sizes="320px"
+      />
+    </div>
+    <div className="p-6">
+      <h3 className="text-xl font-bold text-white h-16">{name}</h3>
+      <Link
+        href="#"
+        className="group inline-flex items-center text-sm font-semibold text-green-400 hover:text-yellow-400 transition-colors"
+      >
+        Learn More
+        <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+      </Link>
+    </div>
+  </div>
+);
+
+export default function SchoolsSection() {
+  const extendedSchools = [...schools, ...schools]; // Duplicate for seamless loop
+
   return (
-    <section className="py-24 md:py-32 bg-white">
+    <section className="py-16 md:py-20 bg-white">
       <div className="container mx-auto px-4 md:px-8 max-w-7xl">
-        {/* Simple Header */}
-        <div className="text-center mb-20">
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-slate-900 mb-6 tracking-tight">
-            Campus Life at GLA Noida
+        {/* Top Content Section */}
+        <div className="text-center max-w-4xl mx-auto mb-16">
+          <h2 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6">
+            Campus <span className="text-green-600">Life</span>
           </h2>
-          <p className="text-2xl md:text-3xl text-slate-600 font-light">
-            A vibrant ecosystem of learning and growth
+          <p className="text-slate-600 text-lg leading-relaxed">
+            GLA University fosters a vibrant campus life that encourages
+            creativity in all its forms—be it art, music, drama, or dance.
+            Students experience a dynamic environment with countless
+            opportunities for personal growth and leadership development. The
+            university also provides excellent sporting facilities and programs,
+            encouraging an active lifestyle and enabling students to compete at
+            various levels, making for a truly memorable and holistic
+            experience.
           </p>
         </div>
 
-        {/* Three Column Grid - All Equal */}
-        <div className="grid md:grid-cols-3 gap-8">
-          {campusActivities.map((activity) => {
-            const Icon = activity.icon;
-            return (
-              <Card
-                key={activity.id}
-                className="group relative overflow-hidden border-0 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:-translate-y-2"
-              >
-                {/* Large Image - 400px */}
-                <div className="relative h-[400px] overflow-hidden">
-                  <div
-                    className="absolute inset-0 bg-cover bg-center transform group-hover:scale-110 transition-transform duration-700"
-                    style={{ backgroundImage: `url(${activity.image})` }}
-                  />
-                  {/* Gradient Overlay */}
-                  <div
-                    className={`absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent`}
-                  />
-
-                  {/* Floating Icon */}
-                  <div className="absolute top-6 left-6">
-                    <div
-                      className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${activity.gradient} flex items-center justify-center shadow-2xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-300`}
-                    >
-                      <Icon className="w-8 h-8 text-white" />
-                    </div>
-                  </div>
-
-                  {/* Title on Image */}
-                  <div className="absolute bottom-6 left-6 right-6">
-                    <h3 className="text-3xl md:text-4xl font-bold text-white mb-2">
-                      {activity.title}
-                    </h3>
-                  </div>
-                </div>
-
-                {/* Content */}
-                <div className="p-8 bg-white">
-                  <p className="text-lg text-slate-600 leading-relaxed mb-6">
-                    {activity.description}
-                  </p>
-
-                  <Button
-                    className={`w-full bg-gradient-to-r ${activity.gradient} hover:opacity-90 text-white text-base font-semibold shadow-lg group/btn`}
-                    size="lg"
-                  >
-                    Learn more
-                    <ArrowRight className="ml-2 h-5 w-5 group-hover/btn:translate-x-1 transition-transform" />
-                  </Button>
-                </div>
-              </Card>
-            );
-          })}
+        {/* Infinite Slider */}
+        <div className="overflow-hidden relative w-full">
+          <div className="flex space-x-8 animate-scroll">
+            {extendedSchools.map((school, index) => (
+              <SchoolCard
+                key={`${school.id}-${index}`}
+                name={school.name}
+                image={school.image}
+              />
+            ))}
+          </div>
+          {/* Fade effect on the sides */}
+          <div className="absolute top-0 left-0 h-full w-24 bg-gradient-to-r from-white to-transparent pointer-events-none" />
+          <div className="absolute top-0 right-0 h-full w-24 bg-gradient-to-l from-white to-transparent pointer-events-none" />
         </div>
       </div>
+
+      {/* Keyframes for the scrolling animation */}
+      <style jsx>{`
+        @keyframes scroll {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-${schools.length * (320 + 32)}px);
+          }
+        }
+
+        .animate-scroll {
+          animation: scroll 40s linear infinite;
+        }
+      `}</style>
     </section>
   );
 }

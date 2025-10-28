@@ -8,6 +8,8 @@ import CampusLife from "@/app/pages/Home/CampusLife";
 import CampusEvents from "@/app/pages/Home/CampusEvents";
 import StatShowcase from "@/app/pages/Home/StatShowcase";
 import RecruiterShowcase from "@/app/pages/Home/RecruiterShowcase";
+import ExperienceGLASection from "@/app/pages/Home/ExperienceGLASection";
+import ResearchSection from "@/app/pages/Home/ResearchSection";
 
 export default function Home() {
   return (
@@ -18,10 +20,12 @@ export default function Home() {
       <VisionSection />
       <ProgramsShowcase />
       <WhatSetUsApart />
+      <ExperienceGLASection />
       <CampusLife />
       <CampusEvents />
       <StatShowcase />
       <RecruiterShowcase />
+      <ResearchSection />
     </div>
   );
 }

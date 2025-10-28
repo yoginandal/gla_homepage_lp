@@ -52,14 +52,14 @@ export default function ProgramFinder() {
     programData[selectedCategory]?.subcategories || [];
 
   return (
-    <section className="relative py-20 md:py-32 bg-slate-900 text-white overflow-hidden">
+    <section className="relative py-16 md:py-20 bg-slate-900 text-white overflow-hidden">
       <div className="container mx-auto px-4 md:px-8 max-w-7xl">
         {/* Main Container - Square on Mobile, D-Shape on Desktop */}
-        <div className="relative">
+        <div className="relative overflow-hidden">
           {/* Container with Responsive Border Radius */}
-          <div className="relative bg-white shadow-2xl overflow-hidden rounded-2xl lg:rounded-none lg:rounded-r-[300px]">
+          <div className="relative bg-white shadow-2xl overflow-hidden rounded-2xl lg:rounded-none lg:rounded-r-[200px] xl:rounded-r-[300px]">
             {/* Green-Yellow Gradient D-Shape Background (Desktop Only) */}
-            <div className="hidden lg:block absolute right-0 top-0 bottom-0 w-1/2 bg-gradient-to-br from-green-500 via-green-400 to-yellow-400 rounded-r-[300px]" />
+            <div className="hidden lg:block absolute right-0 top-0 bottom-0 w-1/2 bg-linear-to-br from-green-500 via-green-400 to-yellow-400 rounded-r-[200px] xl:rounded-r-[300px]" />
 
             <div className="grid lg:grid-cols-2 items-stretch relative">
               {/* Left Side - Form Content */}

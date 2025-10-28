@@ -137,7 +137,7 @@ export default function CampusEventsSection() {
   const HappeningIcon = happening.icon;
 
   return (
-    <section className="relative w-full bg-gradient-to-br from-slate-50 via-white to-green-50 py-20 md:py-28 overflow-hidden">
+    <section className="relative w-full bg-linear-to-br from-slate-50 via-white to-green-50 py-16 md:py-20 overflow-hidden">
       {/* Background Decorative Elements - Same as Vision Section */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-0 right-0 w-96 h-96 bg-yellow-400/10 rounded-full blur-3xl"></div>
@@ -194,7 +194,7 @@ export default function CampusEventsSection() {
                         priority={index === 0}
                       />
                       <div
-                        className={`absolute inset-0 bg-gradient-to-t ${item.gradient} opacity-60`}
+                        className={`absolute inset-0 bg-linear-to-t ${item.gradient} opacity-60`}
                       ></div>
                     </div>
                   ))}
@@ -202,7 +202,7 @@ export default function CampusEventsSection() {
                   {/* Category Badge */}
                   <div className="absolute top-4 left-4">
                     <Badge
-                      className={`bg-gradient-to-r ${happening.gradient} text-white border-0 px-3 py-1 text-xs font-bold uppercase shadow-lg`}
+                      className={`bg-linear-to-r ${happening.gradient} text-white border-0 px-3 py-1 text-xs font-bold uppercase shadow-lg`}
                     >
                       <HappeningIcon className="h-3 w-3 mr-1 inline" />
                       {happening.tag}
@@ -296,7 +296,7 @@ export default function CampusEventsSection() {
                   <div className="flex gap-4 p-5">
                     {/* Date Badge */}
                     <div
-                      className={`flex-shrink-0 w-16 h-16 rounded-xl bg-gradient-to-br ${event.gradient} flex flex-col items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform`}
+                      className={`flex-shrink-0 w-16 h-16 rounded-xl bg-linear-to-br ${event.gradient} flex flex-col items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform`}
                     >
                       <div className="text-2xl font-extrabold leading-none">
                         {event.date}
@@ -332,7 +332,7 @@ export default function CampusEventsSection() {
 
                   {/* Hover Gradient Accent */}
                   <div
-                    className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${event.gradient} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left`}
+                    className={`absolute bottom-0 left-0 right-0 h-1 bg-linear-to-r ${event.gradient} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left`}
                   ></div>
                 </Card>
               ))}

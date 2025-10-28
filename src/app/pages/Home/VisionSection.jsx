@@ -6,13 +6,13 @@ import { TrendingUp, Target, Award, ArrowRight } from "lucide-react";
 
 export default function VisionSection() {
   return (
-    <section className="relative w-full bg-gradient-to-br from-slate-50 via-white to-green-50 py-20 md:py-28 overflow-hidden">
+    <section className="relative w-full bg-linear-to-br from-slate-50 via-white to-green-50 py-16 md:py-20 overflow-hidden">
       {/* Background Decorative Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-yellow-400/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-green-600/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 right-0 w-64 h-64 md:w-96 md:h-96 bg-yellow-400/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-64 h-64 md:w-96 md:h-96 bg-green-600/10 rounded-full blur-3xl"></div>
         {/* Grid Pattern */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px]"></div>
       </div>
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 md:px-8">
@@ -29,7 +29,7 @@ export default function VisionSection() {
             <span className="text-slate-900">Our </span>
             <span className="text-green-600">5-Year </span>
             <span className="text-slate-900">Vision</span>
-            <div className="h-1.5 w-32 bg-gradient-to-r from-green-600 to-yellow-500 mx-auto mt-4 rounded-full"></div>
+            <div className="h-1.5 w-32 bg-linear-to-r from-green-600 to-yellow-500 mx-auto mt-4 rounded-full"></div>
           </h2>
 
           <p className="text-lg md:text-xl text-slate-600 leading-relaxed mt-6">
@@ -41,7 +41,7 @@ export default function VisionSection() {
         {/* Split Cards Layout */}
         <div className="grid lg:grid-cols-2 gap-6 md:gap-8">
           {/* Card 1 - Targeted Average Salary */}
-          <Card className="group relative overflow-hidden bg-gradient-to-br from-green-900 via-green-800 to-green-700 border-0 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-[1.02]">
+          <Card className="group relative overflow-hidden bg-linear-to-br from-green-900 via-green-800 to-green-700 border-0 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-[1.02]">
             {/* Decorative Pattern */}
             <div className="absolute inset-0 opacity-10">
               <div className="absolute top-0 right-0 w-64 h-64 bg-white rounded-full blur-3xl"></div>
@@ -89,7 +89,7 @@ export default function VisionSection() {
                 </div>
                 <div className="h-2 bg-green-950/50 rounded-full overflow-hidden">
                   <div
-                    className="h-full bg-gradient-to-r from-yellow-400 to-yellow-300 rounded-full transition-all duration-1000 ease-out"
+                    className="h-full bg-linear-to-r from-yellow-400 to-yellow-300 rounded-full transition-all duration-1000 ease-out"
                     style={{ width: "65%" }}
                   ></div>
                 </div>
@@ -122,7 +122,7 @@ export default function VisionSection() {
               {/* Main Value */}
               <div className="mb-8">
                 <div className="flex items-baseline gap-2 mb-2">
-                  <span className="text-6xl md:text-7xl lg:text-8xl font-black bg-gradient-to-r from-green-600 to-green-700 bg-clip-text text-transparent drop-shadow-lg">
+                  <span className="text-6xl md:text-7xl lg:text-8xl font-black bg-linear-to-r from-green-600 to-green-700 bg-clip-text text-transparent drop-shadow-lg">
                     ₹15
                   </span>
                   <span className="text-3xl md:text-4xl font-bold text-green-700">
@@ -152,7 +152,7 @@ export default function VisionSection() {
                     key={index}
                     className="flex items-center gap-3 text-sm md:text-base text-slate-700"
                   >
-                    <div className="flex-shrink-0 w-2 h-2 bg-green-600 rounded-full"></div>
+                    <div className="shrink-0 w-2 h-2 bg-green-600 rounded-full"></div>
                     <span>{feature}</span>
                   </div>
                 ))}

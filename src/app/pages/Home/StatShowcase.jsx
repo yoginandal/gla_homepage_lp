@@ -74,17 +74,17 @@ const CountUp = ({ end, duration = 2000, suffix = "" }) => {
 
 export default function StatShowcase() {
   return (
-    <section className="relative py-24 md:py-32 bg-gradient-to-b from-slate-50 to-white overflow-hidden">
+    <section className="relative py-16 md:py-20 bg-linear-to-b from-slate-50 to-white overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-[0.02]">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#000_1px,transparent_1px),linear-gradient(to_bottom,#000_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#000_1px,transparent_1px),linear-gradient(to_bottom,#000_1px,transparent_1px)] bg-size-[4rem_4rem]"></div>
       </div>
 
       <div className="relative z-10 container mx-auto px-4 md:px-8 max-w-7xl">
         {/* Large Hero Text with updated Text Shadow */}
-        <div className="text-center mb-20">
+        <div className="text-center mb-12 md:mb-16 overflow-hidden">
           <h2
-            className="text-8xl md:text-9xl lg:text-[12rem] font-black tracking-tight leading-none"
+            className="text-7xl sm:text-8xl md:text-9xl lg:text-[10rem] xl:text-[12rem] font-black tracking-tight leading-none px-4"
             style={{
               color: "#f5f5f5",
               textShadow: `
@@ -104,10 +104,7 @@ export default function StatShowcase() {
           {stats.map((stat, index) => (
             <div key={index} className="text-center group">
               {/* Number - Font size and color applied here */}
-              <div
-                className="mb-4 text-green-600 font-medium"
-                style={{ fontSize: "80px", lineHeight: "1" }}
-              >
+              <div className="mb-4 text-green-600 font-medium text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-none">
                 <CountUp
                   end={stat.value}
                   duration={2500}

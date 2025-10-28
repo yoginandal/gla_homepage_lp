@@ -77,11 +77,11 @@ export default function RankingSection() {
   };
 
   return (
-    <section className="relative py-16 md:py-24 bg-white overflow-hidden">
+    <section className="relative py-16 md:py-20 bg-white overflow-hidden">
       <div className="container mx-auto px-4 md:px-8 max-w-7xl">
         {/* Header */}
         <div className="text-center mb-12 md:mb-16">
-          <Badge className="mb-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white border-0 px-4 py-1.5">
+          <Badge className="mb-4 bg-linear-to-r from-blue-600 to-purple-600 text-white border-0 px-4 py-1.5">
             <Award className="w-3.5 h-3.5 mr-2" />
             Recognition & Rankings
           </Badge>
@@ -104,13 +104,13 @@ export default function RankingSection() {
             {getCurrentPageItems().map((item, index) => (
               <div
                 key={item.id}
-                className="group relative bg-gradient-to-br from-slate-50 to-white border-2 border-slate-200 rounded-2xl p-6 md:p-8 hover:border-slate-300 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+                className="group relative bg-linear-to-br from-slate-50 to-white border-2 border-slate-200 rounded-2xl p-6 md:p-8 hover:border-slate-300 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
               >
                 <div className="flex gap-6">
                   {/* Rank Badge */}
-                  <div className="flex-shrink-0">
+                  <div className="shrink-0">
                     <div className="relative w-20 h-20 md:w-24 md:h-24">
-                      <div className="absolute inset-0 bg-gradient-to-br from-amber-400 to-orange-500 rounded-2xl shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300" />
+                      <div className="absolute inset-0 bg-linear-to-br from-amber-400 to-orange-500 rounded-2xl shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300" />
                       <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
                         <span className="text-xs font-bold opacity-90">#</span>
                         <span className="text-4xl md:text-5xl font-black">
@@ -176,7 +176,7 @@ export default function RankingSection() {
                     className={cn(
                       "transition-all rounded-full",
                       index === currentIndex
-                        ? "w-8 h-2.5 bg-gradient-to-r from-blue-600 to-purple-600"
+                        ? "w-8 h-2.5 bg-linear-to-r from-blue-600 to-purple-600"
                         : "w-2.5 h-2.5 bg-slate-300 hover:bg-slate-400"
                     )}
                   />
@@ -186,11 +186,11 @@ export default function RankingSection() {
           </div>
 
           {/* Right - Trophy */}
-          <div className="relative">
+          <div className="relative overflow-hidden">
             <div className="relative max-w-lg mx-auto lg:mx-0 lg:ml-auto">
               {/* Background Circle */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-[400px] h-[400px] rounded-full bg-gradient-to-br from-amber-100 to-orange-100 opacity-40" />
+                <div className="w-full max-w-[400px] aspect-square rounded-full bg-linear-to-br from-amber-100 to-orange-100 opacity-40" />
               </div>
 
               {/* Trophy Video */}
@@ -209,7 +209,7 @@ export default function RankingSection() {
               {/* Excellence Badge */}
               <div className="absolute -bottom-6 -right-6 bg-white rounded-2xl shadow-xl p-5 border border-slate-200">
                 <div className="flex items-center gap-3">
-                  <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center">
+                  <div className="w-11 h-11 rounded-xl bg-linear-to-br from-amber-400 to-orange-500 flex items-center justify-center">
                     <Award className="w-6 h-6 text-white" />
                   </div>
                   <div>

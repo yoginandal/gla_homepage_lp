@@ -23,7 +23,7 @@ export default function QualityEducationSection() {
   }, []);
 
   return (
-    <section className="bg-white py-20 md:py-24">
+    <section className="bg-white py-16 md:py-20">
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* LEFT SIDE: Static Text Content */}
