@@ -16,16 +16,16 @@ export default function Home() {
     <div className="min-h-screen bg-white">
       <HeroSlider />
       <EducationHero />
-      <RankingSection />
-      <VisionSection />
+      <CampusLife />
       <ProgramsShowcase />
       <WhatSetUsApart />
       <ExperienceGLASection />
-      <CampusLife />
-      <CampusEvents />
+      <ResearchSection />
       <StatShowcase />
       <RecruiterShowcase />
-      <ResearchSection />
+      <RankingSection />
+      <VisionSection />
+      <CampusEvents />
     </div>
   );
 }

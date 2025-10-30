@@ -55,15 +55,15 @@ export default function ProgramFinder() {
     <section className="relative py-16 md:py-20 bg-slate-900 text-white overflow-hidden">
       <div className="container mx-auto px-4 md:px-8 max-w-7xl">
         {/* Main Container - Square on Mobile, D-Shape on Desktop */}
-        <div className="relative overflow-hidden">
+        <div className="relative">
           {/* Container with Responsive Border Radius */}
-          <div className="relative bg-white shadow-2xl overflow-hidden rounded-2xl lg:rounded-none lg:rounded-r-[200px] xl:rounded-r-[300px]">
+          <div className="relative bg-white shadow-2xl rounded-2xl lg:rounded-none lg:rounded-r-[200px] xl:rounded-r-[300px]">
             {/* Green-Yellow Gradient D-Shape Background (Desktop Only) */}
             <div className="hidden lg:block absolute right-0 top-0 bottom-0 w-1/2 bg-linear-to-br from-green-500 via-green-400 to-yellow-400 rounded-r-[200px] xl:rounded-r-[300px]" />
 
             <div className="grid lg:grid-cols-2 items-stretch relative">
               {/* Left Side - Form Content */}
-              <div className="relative z-10 px-8 md:px-16 py-16 md:py-24 flex items-center">
+              <div className="relative z-10 px-8 md:px-16 py-16 md:py-24 flex items-center overflow-visible">
                 <div className="space-y-8 max-w-lg w-full">
                   {/* Header */}
                   <div className="space-y-4">
@@ -181,7 +181,7 @@ export default function ProgramFinder() {
               </div>
 
               {/* Right Side - Student Image (Desktop Only) */}
-              <div className="relative hidden lg:block min-h-[600px]">
+              <div className="relative hidden lg:block min-h-[600px] overflow-hidden rounded-r-[200px] xl:rounded-r-[300px]">
                 <div className="absolute inset-0 flex items-end justify-start pl-4">
                   <img
                     src="https://static.vecteezy.com/system/resources/thumbnails/063/405/522/small/young-beautiful-college-student-with-backpack-and-holding-book-isolated-on-the-transparent-background-png.png"

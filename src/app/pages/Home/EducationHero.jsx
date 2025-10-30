@@ -48,26 +48,6 @@ export default function UniversityLegacy() {
                 achieve global leadership.
               </p>
             </div>
-
-            {/* Stats Grid - Desktop */}
-            <div className="hidden md:grid grid-cols-2 gap-4 pt-6">
-              {stats.map((stat, index) => (
-                <div key={index} className="relative group">
-                  <div className="absolute inset-0 bg-linear-to-br from-green-600/20 to-yellow-500/20 rounded-lg blur-xl group-hover:blur-2xl transition-all"></div>
-                  <div className="relative bg-slate-800/80 backdrop-blur-sm border border-slate-700 rounded-lg p-4 hover:border-green-500/50 transition-all">
-                    <div className="text-2xl lg:text-3xl font-extrabold text-green-400 mb-1">
-                      {stat.value}
-                    </div>
-                    <div className="text-xs lg:text-sm font-semibold text-white leading-tight">
-                      {stat.label}
-                    </div>
-                    <div className="text-xs text-gray-400 mt-0.5">
-                      {stat.sublabel}
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
 
           {/* Right Content - Quote */}
@@ -107,6 +87,26 @@ export default function UniversityLegacy() {
               />
             </div>
           </div>
+        </div>
+
+        {/* Stats Grid - Desktop (Horizontally Aligned at Bottom) */}
+        <div className="hidden md:grid grid-cols-4 gap-4 pt-12 mt-8">
+          {stats.map((stat, index) => (
+            <div key={index} className="relative group">
+              <div className="absolute inset-0 bg-linear-to-br from-green-600/20 to-yellow-500/20 rounded-lg blur-xl group-hover:blur-2xl transition-all"></div>
+              <div className="relative bg-slate-800/80 backdrop-blur-sm border border-slate-700 rounded-lg p-4 hover:border-green-500/50 transition-all text-center">
+                <div className="text-2xl lg:text-3xl font-extrabold text-green-400 mb-1">
+                  {stat.value}
+                </div>
+                <div className="text-xs lg:text-sm font-semibold text-white leading-tight">
+                  {stat.label}
+                </div>
+                <div className="text-xs text-gray-400 mt-0.5">
+                  {stat.sublabel}
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
 
         {/* Stats Grid - Mobile */}

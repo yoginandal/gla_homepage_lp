@@ -17,77 +17,75 @@ export default function VisionSection() {
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 md:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-600/10 rounded-full mb-6">
-            <Target className="h-5 w-5 text-green-600" />
-            <span className="text-sm font-semibold text-green-700">
+        <div className="text-center max-w-3xl mx-auto mb-8 md:mb-12">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-green-600/10 rounded-full mb-4">
+            <Target className="h-4 w-4 text-green-600" />
+            <span className="text-xs font-semibold text-green-700">
               Strategic Roadmap
             </span>
           </div>
 
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3">
             <span className="text-slate-900">Our </span>
             <span className="text-green-600">5-Year </span>
             <span className="text-slate-900">Vision</span>
-            <div className="h-1.5 w-32 bg-linear-to-r from-green-600 to-yellow-500 mx-auto mt-4 rounded-full"></div>
+            <div className="h-1 w-24 bg-linear-to-r from-green-600 to-yellow-500 mx-auto mt-3 rounded-full"></div>
           </h2>
 
-          <p className="text-lg md:text-xl text-slate-600 leading-relaxed mt-6">
+          <p className="text-base md:text-lg text-slate-600 leading-relaxed mt-4">
             Setting new benchmarks in education with industry-focused learning
             and exceptional career outcomes
           </p>
         </div>
 
         {/* Split Cards Layout */}
-        <div className="grid lg:grid-cols-2 gap-6 md:gap-8">
+        <div className="grid lg:grid-cols-2 gap-4 md:gap-6">
           {/* Card 1 - Targeted Average Salary */}
-          <Card className="group relative overflow-hidden bg-linear-to-br from-green-900 via-green-800 to-green-700 border-0 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-[1.02]">
+          <Card className="group relative overflow-hidden bg-linear-to-br from-green-900 via-green-800 to-green-700 border-0 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-[1.01]">
             {/* Decorative Pattern */}
             <div className="absolute inset-0 opacity-10">
               <div className="absolute top-0 right-0 w-64 h-64 bg-white rounded-full blur-3xl"></div>
               <div className="absolute bottom-0 left-0 w-48 h-48 bg-yellow-400 rounded-full blur-2xl"></div>
             </div>
 
-            <div className="relative p-8 md:p-10 lg:p-12">
+            <div className="relative p-6 md:p-8">
               {/* Icon Badge */}
-              <div className="inline-flex items-center justify-center w-14 h-14 bg-yellow-400 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                <TrendingUp className="h-7 w-7 text-green-900" />
+              <div className="inline-flex items-center justify-center w-12 h-12 bg-yellow-400 rounded-xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                <TrendingUp className="h-6 w-6 text-green-900" />
               </div>
 
               {/* Title */}
-              <h3 className="text-xl md:text-2xl font-bold text-white/90 mb-6">
+              <h3 className="text-lg md:text-xl font-bold text-white/90 mb-4">
                 Targeted Average Salary
               </h3>
 
               {/* Main Value */}
-              <div className="mb-8">
-                <div className="flex items-baseline gap-2 mb-2">
-                  <span className="text-6xl md:text-7xl lg:text-8xl font-black text-yellow-400 drop-shadow-2xl">
+              <div className="mb-6">
+                <div className="flex items-baseline gap-2 mb-1">
+                  <span className="text-5xl md:text-6xl font-black text-yellow-400 drop-shadow-2xl">
                     ₹30
                   </span>
-                  <span className="text-3xl md:text-4xl font-bold text-yellow-300">
+                  <span className="text-2xl md:text-3xl font-bold text-yellow-300">
                     LPA
                   </span>
                 </div>
-                <p className="text-sm md:text-base text-green-200 font-medium">
-                  by 2029
-                </p>
+                <p className="text-sm text-green-200 font-medium">by 2029</p>
               </div>
 
               {/* Description */}
-              <p className="text-base md:text-lg text-white/80 leading-relaxed mb-6">
+              <p className="text-sm md:text-base text-white/80 leading-relaxed mb-4">
                 Our comprehensive industry partnerships and cutting-edge
                 curriculum are designed to prepare students for high-value roles
                 in the global market
               </p>
 
               {/* Progress Bar */}
-              <div className="space-y-2">
-                <div className="flex justify-between text-sm text-white/70">
+              <div className="space-y-1.5">
+                <div className="flex justify-between text-xs text-white/70">
                   <span>Progress to Goal</span>
                   <span>65%</span>
                 </div>
-                <div className="h-2 bg-green-950/50 rounded-full overflow-hidden">
+                <div className="h-1.5 bg-green-950/50 rounded-full overflow-hidden">
                   <div
                     className="h-full bg-linear-to-r from-yellow-400 to-yellow-300 rounded-full transition-all duration-1000 ease-out"
                     style={{ width: "65%" }}
@@ -97,52 +95,52 @@ export default function VisionSection() {
             </div>
 
             {/* Corner Accent */}
-            <div className="absolute top-0 right-0 w-32 h-32 bg-yellow-400/20 rounded-bl-full"></div>
+            <div className="absolute top-0 right-0 w-24 h-24 bg-yellow-400/20 rounded-bl-full"></div>
           </Card>
 
           {/* Card 2 - Expected Salary for First Graduating Batch */}
-          <Card className="group relative overflow-hidden bg-white border-2 border-slate-200 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-[1.02]">
+          <Card className="group relative overflow-hidden bg-white border border-slate-200 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-[1.01]">
             {/* Decorative Pattern */}
             <div className="absolute inset-0 opacity-5">
               <div className="absolute top-0 right-0 w-64 h-64 bg-green-600 rounded-full blur-3xl"></div>
               <div className="absolute bottom-0 left-0 w-48 h-48 bg-yellow-500 rounded-full blur-2xl"></div>
             </div>
 
-            <div className="relative p-8 md:p-10 lg:p-12">
+            <div className="relative p-6 md:p-8">
               {/* Icon Badge */}
-              <div className="inline-flex items-center justify-center w-14 h-14 bg-green-600 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                <Award className="h-7 w-7 text-white" />
+              <div className="inline-flex items-center justify-center w-12 h-12 bg-green-600 rounded-xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                <Award className="h-6 w-6 text-white" />
               </div>
 
               {/* Title */}
-              <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-6">
+              <h3 className="text-lg md:text-xl font-bold text-slate-900 mb-4">
                 Expected Salary for First Graduating Batch
               </h3>
 
               {/* Main Value */}
-              <div className="mb-8">
-                <div className="flex items-baseline gap-2 mb-2">
-                  <span className="text-6xl md:text-7xl lg:text-8xl font-black bg-linear-to-r from-green-600 to-green-700 bg-clip-text text-transparent drop-shadow-lg">
+              <div className="mb-6">
+                <div className="flex items-baseline gap-2 mb-1">
+                  <span className="text-5xl md:text-6xl font-black bg-linear-to-r from-green-600 to-green-700 bg-clip-text text-transparent drop-shadow-lg">
                     ₹15
                   </span>
-                  <span className="text-3xl md:text-4xl font-bold text-green-700">
+                  <span className="text-2xl md:text-3xl font-bold text-green-700">
                     LPA
                   </span>
                 </div>
-                <p className="text-sm md:text-base text-slate-600 font-medium">
+                <p className="text-sm text-slate-600 font-medium">
                   starting package
                 </p>
               </div>
 
               {/* Description */}
-              <p className="text-base md:text-lg text-slate-600 leading-relaxed mb-6">
+              <p className="text-sm md:text-base text-slate-600 leading-relaxed mb-4">
                 Our first batch of graduates will enter the job market with
                 practical skills and industry exposure, commanding competitive
                 starting salaries
               </p>
 
               {/* Feature List */}
-              <div className="space-y-3">
+              <div className="space-y-2">
                 {[
                   "Industry-ready skillset",
                   "Practical project experience",
@@ -150,23 +148,23 @@ export default function VisionSection() {
                 ].map((feature, index) => (
                   <div
                     key={index}
-                    className="flex items-center gap-3 text-sm md:text-base text-slate-700"
+                    className="flex items-center gap-2 text-sm text-slate-700"
                   >
-                    <div className="shrink-0 w-2 h-2 bg-green-600 rounded-full"></div>
+                    <div className="shrink-0 w-1.5 h-1.5 bg-green-600 rounded-full"></div>
                     <span>{feature}</span>
                   </div>
                 ))}
               </div>
 
               {/* CTA Link */}
-              <button className="mt-8 inline-flex items-center gap-2 text-green-600 font-semibold hover:gap-3 transition-all group">
+              <button className="mt-6 inline-flex items-center gap-2 text-green-600 font-semibold text-sm hover:gap-3 transition-all group">
                 <span>Learn More</span>
-                <ArrowRight className="h-5 w-5" />
+                <ArrowRight className="h-4 w-4" />
               </button>
             </div>
 
             {/* Corner Accent */}
-            <div className="absolute bottom-0 left-0 w-32 h-32 bg-green-600/10 rounded-tr-full"></div>
+            <div className="absolute bottom-0 left-0 w-24 h-24 bg-green-600/10 rounded-tr-full"></div>
           </Card>
         </div>
 
