@@ -5,9 +5,9 @@ import Image from "next/image";
 
 // Array of images for the slider
 const sliderImages = [
-  "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=2070&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=2070&auto=format&fit=crop",
+  "/images/IMG-20251104-WA0009_9_11zon.webp",
+  "/images/IMG-20251104-WA0010_10_11zon.webp",
+  "/images/IMG-20251104-WA0012_12_11zon.webp",
 ];
 
 export default function QualityEducationSection() {
@@ -53,10 +53,10 @@ export default function QualityEducationSection() {
           {/* RIGHT SIDE: Image Slider with Asymmetrical Border */}
           <div className="relative w-full max-w-lg mx-auto h-auto">
             {/* The asymmetrical green border with gradient background */}
-            <div className="relative bg-linear-to-br from-green-500 via-green-400 to-yellow-400 p-3">
-              <div className="bg-white p-3">
+            <div className="relative bg-green-500  py-12 pr-24 ">
+              <div className="bg-white ">
                 {/* The image container with top padding */}
-                <div className="relative w-full h-[400px] sm:h-[450px] overflow-hidden pt-8">
+                <div className="relative w-full h-[400px] sm:h-[500px] overflow-hidden pt-8">
                   {sliderImages.map((src, index) => (
                     <div
                       key={index}

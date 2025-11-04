@@ -71,7 +71,7 @@ export default function ResearchSection() {
             <div className="relative w-[350px] md:w-[450px] lg:w-[550px]">
               {/* D-Shape Background */}
               <div
-                className="absolute left-0 top-0 bg-linear-to-br from-green-600 to-yellow-500 shadow-2xl"
+                className="absolute left-0 top-0 bg-yellow-500 shadow-2xl"
                 style={{
                   borderRadius: "8px 8px 50% 50% / 8px 8px 50% 50%",
                   width: "180px",
@@ -81,9 +81,11 @@ export default function ResearchSection() {
               />
 
               {/* Text overlaying the D-shape */}
-              <div className="relative z-10 w-[350px] md:w-[450px] lg:w-[550px] pt-8 pl-4 md:pl-8">
-                <h2 className="text-3xl md:text-4xl lg:text-5xl  text-white leading-tight">
-                  <span className="block text-left pl-12 md:pl-20 font-medium lg:pl-[5.8rem]">
+              <div className="relative z-10 w-[350px] md:w-[450px] lg:w-[550px] pt-8 pl-4 md:pl-8 [text-shadow:2px_2px_8px_rgba(0,0,0,0.3)]">
+
+                <h2 className="text-3xl md:text-4xl lg:text-5xl  text-white leading-tight ">
+                  <span className="block text-left pl-12 md:pl-20 font-medium lg:pl-[5.8rem]
+                  ">
                     Our
                   </span>
                   <span className="block text-left font-bold">Research &</span>
