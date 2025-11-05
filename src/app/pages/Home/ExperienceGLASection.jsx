@@ -9,22 +9,22 @@ const features = [
   {
     title: "Innovation at GLA",
     imageUrl:
-      "https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=2020&auto=format&fit=crop",
+      "/images/DSC00133_11zon_11zon.webp",
   },
   {
     title: "Impact by GLA",
     imageUrl:
-      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop",
+      "/images/DSC03844_11zon_11zon.webp",
   },
   {
     title: "Celebrations at GLA",
     imageUrl:
-      "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?q=80&w=2070&auto=format&fit=crop",
+      "/images/DSC04474_11zon_11zon.webp",
   },
   {
     title: "Collaborations at GLA",
     imageUrl:
-      "https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=2070&auto=format&fit=crop",
+      "/images/DSC00868_11zon_11zon.webp",
   },
 ];
 

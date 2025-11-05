@@ -27,7 +27,7 @@ const campusHappenings = [
     category: "Career",
     tag: "CAREER",
     image:
-      "https://images.unsplash.com/photo-1521737711867-e3b97375f902?q=80&w=1200&auto=format&fit=crop",
+      "/images/DSC03935_11zon_11zon.webp",
     date: "Mar 5, 2024",
     source: "Placement Cell",
     icon: Briefcase,
@@ -39,7 +39,7 @@ const campusHappenings = [
     category: "Campus",
     tag: "FACILITIES",
     image:
-      "https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=1200&auto=format&fit=crop",
+      "/images/DSC03401_11zon_11zon.webp",
     date: "Feb 28, 2024",
     source: "Campus News",
     icon: Building2,
@@ -51,7 +51,7 @@ const campusHappenings = [
     category: "Events",
     tag: "ALUMNI",
     image:
-      "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1200&auto=format&fit=crop",
+      "/images/DSC00516_11zon_11zon.webp",
     date: "Feb 20, 2024",
     source: "Alumni Association",
     icon: Users,
@@ -63,7 +63,7 @@ const campusHappenings = [
     category: "Achievement",
     tag: "AWARDS",
     image:
-      "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1200&auto=format&fit=crop",
+      "/images/DSC03862_11zon_11zon.webp",
     date: "Feb 15, 2024",
     source: "Research Cell",
     icon: Award,
@@ -215,7 +215,7 @@ export default function CampusEventsSection() {
                       variant="secondary"
                       size="icon"
                       onClick={prevHappening}
-                      className="h-10 w-10 rounded-full bg-white/90 backdrop-blur-sm hover:bg-white shadow-lg"
+                      className="h-10 w-10 rounded-full hover:bg-white/90 hover:text-black backdrop-blur-sm bg-black text-white shadow-lg"
                     >
                       <ChevronLeft className="h-5 w-5" />
                     </Button>
@@ -223,7 +223,7 @@ export default function CampusEventsSection() {
                       variant="secondary"
                       size="icon"
                       onClick={nextHappening}
-                      className="h-10 w-10 rounded-full bg-white/90 backdrop-blur-sm hover:bg-white shadow-lg"
+                       className="h-10 w-10 rounded-full hover:bg-white/90 hover:text-black backdrop-blur-sm bg-black text-white shadow-lg"
                     >
                       <ChevronRight className="h-5 w-5" />
                     </Button>

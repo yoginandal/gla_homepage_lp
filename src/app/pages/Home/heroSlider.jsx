@@ -15,7 +15,7 @@ const slides = [
     stats: { value: "95%", label: "Placement Success" },
     ctaText: "Start Your Journey",
     bgImage:
-      "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=2000&auto=format&fit=crop&q=80",
+      "/images/117hbanner_placement-piyush.webp",
   },
   {
     badge: "World-Class Infrastructure",
@@ -25,7 +25,7 @@ const slides = [
     stats: { value: "500+", label: "Industry Partners" },
     ctaText: "Explore Campus",
     bgImage:
-      "https://images.unsplash.com/photo-1562774053-701939374585?w=2000&auto=format&fit=crop&q=80",
+      "/images/101hbanner_offcampus-banner.webp",
   },
   {
     badge: "Industry Integration",
@@ -35,7 +35,7 @@ const slides = [
     stats: { value: "#1", label: "Ranked Institution" },
     ctaText: "Apply Now",
     bgImage:
-      "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=2000&auto=format&fit=crop&q=80",
+      "/images/banner_Image.webp",
   },
 ];
 
@@ -98,7 +98,7 @@ export default function EducationHero() {
               className="absolute inset-0 bg-cover bg-center"
               style={{ backgroundImage: `url(${s.bgImage})` }}
             />
-            <div className="absolute inset-0 bg-linear-to-br from-slate-950/80 via-slate-950/50 to-transparent" />
+            {/* <div className="absolute inset-0 bg-linear-to-br from-slate-950/80 via-slate-950/50 to-transparent" /> */}
             <div className="absolute inset-0 bg-linear-to-t from-slate-950/60 via-transparent to-transparent" />
           </div>
         ))}
