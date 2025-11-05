@@ -2,7 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { useRef } from "react";
 
 const schools = [
   { id: 1, name: "Sports & Athletics", image: "/images/IMG-20251104-WA0001_1_11zon.webp" },
@@ -16,11 +17,11 @@ const schools = [
 ];
 
 const SchoolCard = ({ name, image }) => (
-  <div className="flex-shrink-0 w-[280px] sm:w-[320px] rounded-lg overflow-hidden shadow-xl bg-slate-900 hover:scale-[1.02] transition-transform duration-300">
-    <div className="relative h-56 w-full">
-      <Image src={image} alt={name} fill className="object-cover" sizes="320px" />
+  <div className="flex-shrink-0 w-[260px] sm:w-[300px] rounded-lg overflow-hidden shadow-xl bg-slate-900 hover:scale-[1.02] transition-transform duration-300">
+    <div className="relative h-52 w-full">
+      <Image src={image} alt={name} fill className="object-cover" sizes="(min-width: 640px) 300px, 260px" />
     </div>
-    <div className="p-6">
+    <div className="p-5">
       <h3 className="text-lg sm:text-xl font-bold text-white mb-3 min-h-[56px]">{name}</h3>
       <Link
         href="#"
@@ -34,13 +35,24 @@ const SchoolCard = ({ name, image }) => (
 );
 
 export default function SchoolsSection() {
+  const scrollRef = useRef(null);
   const loopedSchools = [...schools, ...schools];
+
+  const scroll = (direction) => {
+    const container = scrollRef.current;
+    if (!container) return;
+    const scrollAmount = 320;
+    container.scrollBy({
+      left: direction === "left" ? -scrollAmount : scrollAmount,
+      behavior: "smooth",
+    });
+  };
 
   return (
     <section className="py-16 md:py-20 bg-white relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-8 max-w-7xl">
         {/* Heading */}
-        <div className="text-center max-w-4xl mx-auto mb-16">
+        <div className="text-center max-w-4xl mx-auto mb-14">
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
             Campus <span className="text-green-600">Life</span>
           </h2>
@@ -51,17 +63,44 @@ export default function SchoolsSection() {
           </p>
         </div>
 
-        {/* Infinite Scroll */}
-        <div className="overflow-hidden relative marquee-container">
-          <div className="flex space-x-8 animate-marquee">
-            {loopedSchools.map((school, i) => (
-              <SchoolCard key={`${school.id}-${i}`} {...school} />
-            ))}
+        {/* Desktop: Infinite Scroll | Mobile: Manual Scroll with Buttons */}
+        <div className="relative">
+          {/* Desktop Infinite Scroll */}
+          <div className="overflow-hidden relative hidden md:block marquee-container">
+            <div className="flex space-x-8 animate-marquee">
+              {loopedSchools.map((school, i) => (
+                <SchoolCard key={`${school.id}-${i}`} {...school} />
+              ))}
+            </div>
           </div>
 
-          {/* Fades */}
-          {/* <div className="absolute top-0 left-0 h-full w-24 bg-gradient-to-r from-white to-transparent pointer-events-none" />
-          <div className="absolute top-0 right-0 h-full w-24 bg-gradient-to-l from-white to-transparent pointer-events-none" /> */}
+          {/* Mobile Manual Scroll */}
+          <div className="flex md:hidden items-center">
+            <button
+              onClick={() => scroll("left")}
+              className="p-2 bg-slate-800 text-white rounded-full mr-2 active:scale-95 shadow-md"
+            >
+              <ChevronLeft />
+            </button>
+
+            <div
+              ref={scrollRef}
+              className="flex overflow-x-auto gap-4 scrollbar-hide scroll-smooth snap-x snap-mandatory"
+            >
+              {schools.map((school) => (
+                <div key={school.id} className="snap-start">
+                  <SchoolCard {...school} />
+                </div>
+              ))}
+            </div>
+
+            <button
+              onClick={() => scroll("right")}
+              className="p-2 bg-slate-800 text-white rounded-full ml-2 active:scale-95 shadow-md"
+            >
+              <ChevronRight />
+            </button>
+          </div>
         </div>
       </div>
 
@@ -82,9 +121,17 @@ export default function SchoolsSection() {
           width: max-content;
         }
 
-        /* ✅ Pause animation on hover */
         .marquee-container:hover .animate-marquee {
           animation-play-state: paused;
+        }
+
+        /* Hide scrollbar for mobile */
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+        }
+        .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
         }
       `}</style>
     </section>

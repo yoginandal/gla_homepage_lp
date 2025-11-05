@@ -5,7 +5,20 @@ import { ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const programData = {
-  "All Programs": { subcategories: [] },
+  "All Programs": { subcategories: [
+    "B.Tech",
+    "B.A./BBA",
+    "B.A. LL.B",
+    "BBA LL.B",
+    "B.A. LL.B (Hons.)",
+    "BBA LL.B (Hons.)",
+    "Bachelor of Journalism and Mass Communication",
+    "B.Tech in Computation & Media",
+    "Bachelors in Design Program",
+    "4-Year BBA (Hons.) in Hospitality Management",
+    "BBA Entrepreneurship & Family Business",
+    "Engineering", "Management", "Law", "Design", "Sciences"
+  ] },
   "Undergraduate Programs": {
     subcategories: [
       "B.Tech",
@@ -19,6 +32,7 @@ const programData = {
       "Bachelors in Design Program",
       "4-Year BBA (Hons.) in Hospitality Management",
       "BBA Entrepreneurship & Family Business",
+      "M.Tech", "MBA", "M.A.", "LL.M", "M.Sc", "M.Des"
     ],
   },
   "Postgraduate Programs": {
@@ -51,7 +65,7 @@ export default function ProgramFinder() {
 
   return (
     <section className="relative py-10 md:py-14 bg-slate-900 text-white overflow-hidden">
-      <div className="container mx-auto px-4 md:px-8 max-w-8xl">
+      <div className="container mx-auto px-4 md:px-8 max-w-7xl">
         {/* Scroll-based Animation */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -211,7 +225,7 @@ export default function ProgramFinder() {
                 transition={{ delay: 0.2, duration: 0.8 }}
                 className="relative hidden lg:block min-h-[480px] overflow-hidden rounded-r-[200px] xl:rounded-r-[300px]"
               >
-                <div className="absolute inset-0 flex items-end justify-start pl-22">
+                <div className="absolute inset-0 flex items-end justify-start pl-10">
                   <img
                     src="/images/young-beautiful-college-student-with-backpack-and-holding-book-isolated-on-the-transparent-background.png"
                     alt="Student"
