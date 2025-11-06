@@ -3,10 +3,10 @@
 import { useEffect, useRef, useState } from "react";
 
 const stats = [
-  { value: 1500, label: "Placements", suffix: "+" },
-  { value: 400, label: "Companies", suffix: "+" },
-  { value: 1000, label: "Publications", suffix: "+" },
-  { value: 80, label: "Awards", suffix: "+" },
+  { value: 3000, label: "Placement Offers for Previous Batch", suffix: "+" },
+  { value: 500, label: "Global Recruiters from Diverse Domains", suffix: "+" },
+  { value: 60, label: "Highest CTC by Microsoft", suffix: "LPA" },
+  { value: 6.3, label: "Overall Average CTC", suffix: "LPA" },
 ];
 
 const CountUp = ({ end, duration = 2000, suffix = "" }) => {
@@ -83,20 +83,24 @@ export default function StatShowcase() {
       <div className="relative z-10 container mx-auto px-4 md:px-8 max-w-7xl">
         {/* Large Hero Text with updated Text Shadow */}
         <div className="text-center mb-12 md:mb-16 overflow-hidden">
-          <h2
-            className="text-7xl sm:text-8xl md:text-9xl lg:text-[10rem] xl:text-[12rem] font-black tracking-tight leading-none px-4"
-            style={{
-              color: "#f5f5f5",
-              textShadow: `
-                0px 4px 0px rgba(0, 0, 0, 0.1),
-                0px 8px 0px rgba(0, 0, 0, 0.08),
-                0px 12px 0px rgba(0, 0, 0, 0.06),
-                0px 16px 0px rgba(0, 0, 0, 0.04)
-              `,
-            }}
-          >
-            GLA NOIDA
-          </h2>
+        <h2
+  className="relative text-5xl sm:text-6xl md:text-7xl lg:text-[6rem] xl:text-[8rem] font-extrabold tracking-tight leading-none text-center text-transparent bg-gradient-to-b from-zinc-50/80 via-neutral-800 to-black bg-clip-text"
+>
+  GLA PLACEMENT
+  <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-[shine_3s_linear_infinite]" />
+  <style jsx>{`
+    @keyframes shine {
+      0% {
+        transform: translateX(-100%);
+      }
+      100% {
+        transform: translateX(100%);
+      }
+    }
+  `}</style>
+</h2>
+
+
         </div>
 
         {/* Stats Grid with Green/Yellow Colors */}
@@ -105,11 +109,21 @@ export default function StatShowcase() {
             <div key={index} className="text-center group">
               {/* Number - Font size and color applied here */}
               <div className="mb-4 text-green-600 font-medium text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-none">
-                <CountUp
+                {/* <CountUp
                   end={stat.value}
                   duration={2500}
                   suffix={stat.suffix}
-                />
+                /> */}
+                {stat.value}
+
+              {
+                stat.suffix  === "+" ? (
+                  <span className="font-medium text-5xl sm:text-6xl md:text-7xl lg:text-8xl  ">{stat.suffix}</span>
+                ) : (
+                  <span className="font-medium text-2xl sm:text-3xl md:text-4xl lg:text-6xl">{stat.suffix}</span>
+                )
+              }
+                
               </div>
 
               {/* Divider Line - Changes to Yellow on Hover */}

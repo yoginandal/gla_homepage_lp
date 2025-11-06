@@ -10,6 +10,8 @@ import StatShowcase from "@/app/pages/Home/StatShowcase";
 import RecruiterShowcase from "@/app/pages/Home/RecruiterShowcase";
 import ExperienceGLASection from "@/app/pages/Home/ExperienceGLASection";
 import ResearchSection from "@/app/pages/Home/ResearchSection";
+import AchieversSection from "./pages/Home/Achievers";
+import AlumniSection from "./pages/Home/AlumniSection";
 
 export default function Home() {
   return (
@@ -17,14 +19,16 @@ export default function Home() {
       <HeroSlider />
       <EducationHero />
       <CampusLife />
-      <ProgramsShowcase />
-      <WhatSetUsApart />
-      <ExperienceGLASection />
-      <ResearchSection />
       <StatShowcase />
       <RecruiterShowcase />
+      <AchieversSection />
+      <ExperienceGLASection />
       <RankingSection />
-      <VisionSection />
+      {/* <ProgramsShowcase /> */}
+      {/* <WhatSetUsApart /> */}
+      <ResearchSection />
+      {/* <VisionSection /> */}
+      <AlumniSection />
       <CampusEvents />
     </div>
   );

@@ -110,11 +110,17 @@ export default function RankingSection() {
                   {/* Rank Badge */}
                   <div className="shrink-0">
                     <div className="relative w-20 h-20 md:w-24 md:h-24">
-                      <div className="absolute inset-0 bg-linear-to-br from-amber-400 to-orange-500 rounded-2xl shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300" />
-                      <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
-                        <span className="text-xs font-bold opacity-90">#</span>
+                      {/* Card Image */}
+                      <img
+                        src={item.logoSrc || "/images/banner_Image.webp"}
+                        alt="Ranking card"
+                        className="absolute inset-0 w-full h-full object-contain rounded-2xl"
+                      />
+                      
+                      <div className="absolute inset-0 flex flex-col items-center justify-center text-white z-10">
+                        <span className="text-xs font-bold opacity-90"></span>
                         <span className="text-4xl md:text-5xl font-black">
-                          {item.rank}
+                         
                         </span>
                       </div>
                     </div>
@@ -134,11 +140,11 @@ export default function RankingSection() {
                         <Sparkles className="w-3 h-3 mr-1" />
                         {item.year}
                       </Badge>
-                      <img
+                      {/* <img
                         src={item.logoSrc}
                         alt="Institution logo"
                         className="h-6 object-contain"
-                      />
+                      /> */}
                     </div>
                   </div>
                 </div>
