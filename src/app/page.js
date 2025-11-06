@@ -11,6 +11,7 @@ import RecruiterShowcase from "@/app/pages/Home/RecruiterShowcase";
 import ExperienceGLASection from "@/app/pages/Home/ExperienceGLASection";
 import ResearchSection from "@/app/pages/Home/ResearchSection";
 import AchieversSection from "./pages/Home/Achievers";
+import AlumniSection from "./pages/Home/AlumniSection";
 
 export default function Home() {
   return (
@@ -27,6 +28,7 @@ export default function Home() {
       {/* <WhatSetUsApart /> */}
       <ResearchSection />
       {/* <VisionSection /> */}
+      <AlumniSection />
       <CampusEvents />
     </div>
   );

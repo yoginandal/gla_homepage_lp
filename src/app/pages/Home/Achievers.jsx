@@ -72,7 +72,7 @@ export default function AchieversSection() {
       Achievers
           </h2>
           <p className="text-slate-600 text-lg leading-relaxed">
-          At GLA University, we are proud of our students for achieving top positions in public, private and corporate sector.
+          At GLA University, we are proud of our students for achieving top <br /> positions in public, private and corporate sector.
             </p>
             </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">

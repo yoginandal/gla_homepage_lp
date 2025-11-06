@@ -9,12 +9,12 @@ const schools = [
   { id: 1, name: "B.Tech (CSE / AIML)", image: "/images/IMG-20251104-WA0001_1_11zon.webp" },
   { id: 2, name: "BCA", image: "/images/IMG-20251104-WA0002_2_11zon.webp" },
   { id: 3, name: "BBA", image: "/images/IMG-20251104-WA0003_3_11zon.webp" },
-  { id: 4, name: "MBA", image: "/images/IMG-20251104-WA0004_4_11zon.webp" },
+  { id: 4, name: "MBA", image: "/images/DSC03935_11zon_11zon.webp" },
   
 ];
 
 const SchoolCard = ({ name, image }) => (
-  <div className="flex-shrink-0 w-[260px] sm:w-[300px] rounded-lg overflow-hidden shadow-xl bg-slate-900 hover:scale-[1.02] transition-transform duration-300">
+  <div className="shrink-0 w-[260px] sm:w-[300px] md:w-full rounded-lg overflow-hidden shadow-xl bg-slate-900 hover:scale-[1.02] transition-transform duration-300">
     <div className="relative h-52 w-full">
       <Image src={image} alt={name} fill className="object-cover" sizes="(min-width: 640px) 300px, 260px" />
     </div>
@@ -33,7 +33,6 @@ const SchoolCard = ({ name, image }) => (
 
 export default function SchoolsSection() {
   const scrollRef = useRef(null);
-  const loopedSchools = [...schools, ...schools];
 
   const scroll = (direction) => {
     const container = scrollRef.current;
@@ -60,15 +59,13 @@ export default function SchoolsSection() {
           </p>
         </div>
 
-        {/* Desktop: Infinite Scroll | Mobile: Manual Scroll with Buttons */}
+        {/* Desktop: Grid Layout | Mobile: Manual Scroll with Buttons */}
         <div className="relative">
-          {/* Desktop Infinite Scroll */}
-          <div className="overflow-hidden relative hidden md:block marquee-container">
-            <div className="flex space-x-8 animate-marquee">
-              {loopedSchools.map((school, i) => (
-                <SchoolCard key={`${school.id}-${i}`} {...school} />
-              ))}
-            </div>
+          {/* Desktop Grid Layout */}
+          <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
+            {schools.map((school) => (
+              <SchoolCard key={school.id} {...school} />
+            ))}
           </div>
 
           {/* Mobile Manual Scroll */}
@@ -103,26 +100,6 @@ export default function SchoolsSection() {
 
       {/* Animation Styles */}
       <style jsx>{`
-        @keyframes marquee {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
-        }
-
-        .animate-marquee {
-          animation: marquee 80s linear infinite;
-          display: flex;
-          width: max-content;
-        }
-
-        .marquee-container:hover .animate-marquee {
-          animation-play-state: paused;
-        }
-
-        /* Hide scrollbar for mobile */
         .scrollbar-hide::-webkit-scrollbar {
           display: none;
         }

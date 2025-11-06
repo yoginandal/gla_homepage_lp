@@ -109,13 +109,13 @@ export default function ResearchSection() {
               meaningful impact on society and the world at large.
             </p>
 
-            <Link
+            {/* <Link
               href="#"
               className="group inline-flex items-center gap-2 text-white font-semibold text-lg hover:text-green-400 transition-colors"
             >
               Learn More
               <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-            </Link>
+            </Link> */}
           </div>
         </div>
 
