@@ -60,6 +60,7 @@ export function SiteHeader() {
   const [scrolled, setScrolled] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [isScrollingUp, setIsScrollingUp] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const pathname = usePathname();
   const isProgramPage = pathname.startsWith("/programs/");
@@ -81,14 +82,21 @@ export function SiteHeader() {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       const isScrolled = currentScrollY > 50;
+      const isAtTop = currentScrollY <= 10;
 
       // Determine scroll direction and visibility
-      if (currentScrollY > lastScrollY) {
+      if (isAtTop) {
+        // At the top - make transparent
+        setIsVisible(true);
+        setIsScrollingUp(false);
+      } else if (currentScrollY > lastScrollY) {
         // Scrolling down
         setIsVisible(false);
-      } else {
+        setIsScrollingUp(false);
+      } else if (currentScrollY < lastScrollY) {
         // Scrolling up
         setIsVisible(true);
+        setIsScrollingUp(true);
       }
 
       setScrolled(isScrolled);
@@ -133,7 +141,7 @@ export function SiteHeader() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "background-gradient-white shadow-md" : "bg-transparent"
+        isScrollingUp ? "bg-white shadow-md" : "bg-transparent"
       } ${isVisible ? "translate-y-0" : "-translate-y-full"}`}
     >
       {/* Top Bar */}
@@ -348,7 +356,7 @@ export function SiteHeader() {
 
             {/* Mobile Navigation Toggle */}
             <div className="lg:hidden">
-              <MobileNav scrolled={scrolled} />
+              <MobileNav scrolled={scrolled} isScrollingUp={isScrollingUp} />
             </div>
           </div>
         </div>
@@ -363,7 +371,7 @@ export function SiteHeader() {
  * Mobile navigation menu that appears on smaller screens.
  * Includes a toggle button and dropdown menu with all navigation options.
  */
-function MobileNav({ scrolled }) {
+function MobileNav({ scrolled, isScrollingUp }) {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
   const isProgramPage = pathname.startsWith("/programs/");
@@ -373,13 +381,19 @@ function MobileNav({ scrolled }) {
   const isAdvisoryBoardPage = pathname.startsWith("/advisory-board");
   const isAdmissionPage = pathname.startsWith("/admissions");
   const isPlacementsPage = pathname.startsWith("/placements");
+  
+  // At top means not scrolled and not scrolling up
+  const isAtTop = !scrolled && !isScrollingUp;
+  
   return (
     <div className="relative">
       {/* Mobile Menu Toggle Button */}
       <button
         className={`flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-md border transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ${
-          scrolled
-            ? "border-cusBlue text-cusBlue"
+          isAtTop
+            ? "border-black text-black"
+            : scrolled || isScrollingUp
+            ? "border-black text-black"
             : isProgramPage ||
               isContactPage ||
               isAboutPage ||
