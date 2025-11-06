@@ -6,14 +6,11 @@ import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { useRef } from "react";
 
 const schools = [
-  { id: 1, name: "Sports & Athletics", image: "/images/IMG-20251104-WA0001_1_11zon.webp" },
-  { id: 2, name: "Cultural Events & Festivals", image: "/images/IMG-20251104-WA0002_2_11zon.webp" },
-  { id: 3, name: "Library & Learning Spaces", image: "/images/IMG-20251104-WA0003_3_11zon.webp" },
-  { id: 4, name: "Student Clubs & Communities", image: "/images/IMG-20251104-WA0004_4_11zon.webp" },
-  { id: 5, name: "Music & Dance", image: "/images/IMG-20251104-WA0005_5_11zon.webp" },
-  { id: 6, name: "Cafeteria & Dining", image: "/images/IMG-20251104-WA0006_6_11zon.webp" },
-  { id: 7, name: "Art & Photography", image: "/images/IMG-20251104-WA0007_7_11zon.webp" },
-  { id: 8, name: "Hostel Life", image: "/images/IMG-20251104-WA0008_8_11zon.webp" },
+  { id: 1, name: "B.Tech (CSE / AIML)", image: "/images/IMG-20251104-WA0001_1_11zon.webp" },
+  { id: 2, name: "BCA", image: "/images/IMG-20251104-WA0002_2_11zon.webp" },
+  { id: 3, name: "BBA", image: "/images/IMG-20251104-WA0003_3_11zon.webp" },
+  { id: 4, name: "MBA", image: "/images/IMG-20251104-WA0004_4_11zon.webp" },
+  
 ];
 
 const SchoolCard = ({ name, image }) => (
@@ -22,7 +19,7 @@ const SchoolCard = ({ name, image }) => (
       <Image src={image} alt={name} fill className="object-cover" sizes="(min-width: 640px) 300px, 260px" />
     </div>
     <div className="p-5">
-      <h3 className="text-lg sm:text-xl font-bold text-white mb-3 min-h-[56px]">{name}</h3>
+      <h3 className="text-lg sm:text-xl font-bold text-white mb-3 min-h-[40px]">{name}</h3>
       <Link
         href="#"
         className="group inline-flex items-center text-sm font-semibold text-green-400 hover:text-yellow-400 transition-colors"
@@ -54,7 +51,7 @@ export default function SchoolsSection() {
         {/* Heading */}
         <div className="text-center max-w-4xl mx-auto mb-14">
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-            Campus <span className="text-green-600">Life</span>
+            Our <span className="text-green-600">Programs</span>
           </h2>
           <p className="text-slate-600 text-lg leading-relaxed">
             GLA University fosters a vibrant campus life that encourages creativity in all its forms—be it art, music,

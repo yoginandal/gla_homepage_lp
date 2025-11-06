@@ -84,7 +84,7 @@ export default function StatShowcase() {
         {/* Large Hero Text with updated Text Shadow */}
         <div className="text-center mb-12 md:mb-16 overflow-hidden">
           <h2
-            className="text-7xl sm:text-8xl md:text-9xl lg:text-[10rem] xl:text-[12rem] font-black tracking-tight leading-none px-4"
+            className="text-5xl sm:text-6xl md:text-7xl lg:text-[6rem] xl:text-[8rem] font-black tracking-tight leading-none px-4"
             style={{
               color: "#f5f5f5",
               textShadow: `
@@ -95,7 +95,7 @@ export default function StatShowcase() {
               `,
             }}
           >
-            GLA NOIDA
+            GLA PLACEMENT
           </h2>
         </div>
 
@@ -105,11 +105,13 @@ export default function StatShowcase() {
             <div key={index} className="text-center group">
               {/* Number - Font size and color applied here */}
               <div className="mb-4 text-green-600 font-medium text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-none">
-                <CountUp
+                {/* <CountUp
                   end={stat.value}
                   duration={2500}
                   suffix={stat.suffix}
-                />
+                /> */}
+                {stat.value}
+                {stat.suffix}
               </div>
 
               {/* Divider Line - Changes to Yellow on Hover */}
