@@ -95,31 +95,38 @@ export default function TopCollegesSection() {
         <div className="flex flex-col md:flex-row items-center justify-between md:space-x-10">
           {/* Left: Swiper */}
           <div className="w-full md:w-[55%]">
-            <Swiper
-              modules={[Pagination,Autoplay]}
-              slidesPerView={1.6}
-              centeredSlides={true}
-              initialSlide={3}
-              spaceBetween={-80}
-              speed={1200}
-              loop={true}
-              autoplay={{
-                delay: 2000, // 3 seconds between slides
-                disableOnInteraction: false, // keeps autoplay running after swipe
-              }}
-              pagination={{
-                clickable: true,
-                bulletClass:
-                  "swiper-pagination-bullet !bg-gray-500 !opacity-70 !mx-1",
-                bulletActiveClass: "!bg-white !opacity-100",
-              }}
-              onSlideChange={(swiper) => {
-                const realIndex = swiper.realIndex;
-                setActiveIndex(realIndex);
-              }}
-              className="w-full pb-10"
-              style={{ position: 'relative' }}
-            >
+          <Swiper
+  modules={[Pagination, Autoplay]}
+  centeredSlides={true}
+  initialSlide={3}
+  speed={1200}
+  loop={true}
+  autoplay={{
+    delay: 2000,
+    disableOnInteraction: false,
+  }}
+  pagination={{
+    clickable: true,
+    bulletClass:
+      "swiper-pagination-bullet !bg-gray-500 !opacity-70 !mx-1",
+    bulletActiveClass: "!bg-white !opacity-100",
+  }}
+  onSlideChange={(swiper) => {
+    setActiveIndex(swiper.realIndex);
+  }}
+  breakpoints={{
+    0: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+    768: {
+      slidesPerView: 1.6,
+      spaceBetween: -80,
+    },
+  }}
+  className="w-full pb-10"
+>
+
               {videos.map((video, index) => {
                 return (
                 <SwiperSlide 
