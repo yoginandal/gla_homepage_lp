@@ -8,11 +8,11 @@ import { cn } from "@/lib/utils";
 const desktopSlides = [
   // { bgImage: "/images/117hbanner_placement-piyush.webp" },
   // { bgImage: "/images/101hbanner_offcampus-banner.webp" },
-  { bgImage: "/images/banner_Image.webp" },
+  { bgImage: "/images/bg-1.webp" },
 ];
 
 const mobileSlides = [
-  { bgImage: "https://noida.gla.ac.in/banner/banner_image_res.webp" },
+  { bgImage: "/images/bg-1-mobile.webp" },
   // { bgImage: "https://www.gla.ac.in/Uploads/banner/118hbanner_placement-piyush-mob.webp" },
 ];
 
