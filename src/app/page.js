@@ -12,6 +12,8 @@ import ExperienceGLASection from "@/app/pages/Home/ExperienceGLASection";
 import ResearchSection from "@/app/pages/Home/ResearchSection";
 import AchieversSection from "./pages/Home/Achievers";
 import AlumniSection from "./pages/Home/AlumniSection";
+import TopCollegesSection from "./pages/Home/TopCollegesSection";
+import RankingsSection from "./pages/Home/RankingsSection";
 
 export default function Home() {
   return (
@@ -23,10 +25,14 @@ export default function Home() {
       <RecruiterShowcase />
       <AchieversSection />
       <ExperienceGLASection />
-      <RankingSection />
+      {/* <RankingSection /> */}
+      <RankingsSection />
+
       {/* <ProgramsShowcase /> */}
       {/* <WhatSetUsApart /> */}
       <ResearchSection />
+      <TopCollegesSection />
+
       {/* <VisionSection /> */}
       <AlumniSection />
       <CampusEvents />
